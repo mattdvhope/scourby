@@ -41,6 +41,14 @@ module.exports = {
         singleTypes: [`global`],
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: process.env.TAG_MANAGER_ID,
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      }
+    },
     // You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create
     // an index for each language.
