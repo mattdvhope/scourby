@@ -18,6 +18,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
   )
 }
 
+
 export const query = graphql`
   query CategoriesQuery {
     allStrapiCategory {
