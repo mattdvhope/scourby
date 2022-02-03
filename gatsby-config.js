@@ -1,7 +1,3 @@
-// require("dotenv").config({
-//   path: `.env`,
-// })
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -39,7 +35,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-strapi`, // $ npm run develop
+      resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
