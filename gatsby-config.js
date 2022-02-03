@@ -1,6 +1,12 @@
+// require("dotenv").config({
+//   path: `.env`,
+// })
+
 require("dotenv").config({
-  path: `.env`,
+  path: `.env.${process.env.NODE_ENV}`,
 })
+
+const { API_URL, TAG_MANAGER_ID } = process.env;
 
 
 module.exports = {
@@ -29,13 +35,13 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-source-strapi`, // $ npm run develop
       options: {
-        apiURL: process.env.API_URL || `http://localhost:1337`, // $ npm run develop
+        apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
         collectionTypes: [`product`, `category`],
         singleTypes: [`global`],
