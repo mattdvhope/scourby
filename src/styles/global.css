@@ -30,3 +30,11 @@
 
 @tailwind components;
 @tailwind utilities;
+
+.image-blurred-edge {
+    /*background-image: url(`https://res.cloudinary.com/dwpkckmyf/image/upload/v1644251334/Bible%20App%20Joy/bajoy-log_xicz77.jpg`);*/
+    width: 200px;
+    height: 100px;
+    box-shadow: 4px 4px 4px grey;
+    border-radius: 5px;
+}
