@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Header from "~/components/header"
+import OtherOptions from "~/components/OtherOptions"
 import SearchResults from "~/components/search-results"
 import Footer from "~/components/footer"
-
-import Header from "~/components/header"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,6 +26,12 @@ const Layout = ({ children }) => {
       />
       <div className="flex flex-col max-w-screen-lg m-auto min-h-screen p-6 md:p-10">
         <main className="flex-1">{children}</main>
+
+        <OtherOptions
+          setOpenModal={setOpenModal}
+          siteName={data.strapiGlobal.siteName || `Strapi`}
+        />
+
         <Footer />
       </div>
       {openModal && (

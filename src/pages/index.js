@@ -12,7 +12,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
   return (
     <Layout>
       <SEO seo={seo} />
-      <PageHeading>Categories</PageHeading>
+      <PageHeading>Video categories</PageHeading>
       <CategoryList categories={categories} />
     </Layout>
   )
