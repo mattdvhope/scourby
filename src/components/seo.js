@@ -102,7 +102,7 @@ const SEO = ({ seo = {} }) => {
       link={[
         {
           rel: "icon",
-          href: `https://res.cloudinary.com/dwpkckmyf/image/upload/v1643913322/thumbnail_favicon_cbcbae38c4.png`,
+          href: favicon.localFile.publicURL,
         },
       ]}
     />
