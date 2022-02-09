@@ -13,7 +13,7 @@ const Header = ({ setOpenModal }) => {
           <img className="image-blurred-edge" src={LogoImage} alt="logo catalog logo"/>
         </Link>
       </div>
-      <hr className="mt-6 m-auto w-24 border-t-4" />
+      <hr className="mt-1 m-auto w-24 border-t-4" />
     </header>
   )
 }
