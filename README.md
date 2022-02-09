@@ -1,0 +1,4 @@
+1. Initially (w/ my small number of videos at first) I've placed the original 'pages/index.js' file into the 'pages/categories' folder.
+2. I've taken the 'index.js' file out of the 'pages/products' folder and placed it into the 'pages' folder (w/ my small number of videos at first).
+3. Once my number of videos starts to grow, I'll want to categorize them based on subject, content, etc.
+4. And thus, once I start categorizing them, I'll move back to the original file structure -- of placing 'categories' file ('index.js') back into to the 'pages' folder and also moving the 'products' file ('index.js') back into the 'pages/products' folder.

@@ -2,31 +2,42 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "~/components/layout"
-import SEO from "~/components/seo"
-import CategoryList from "~/components/category-list"
 import PageHeading from "~/components/styled/page-heading"
+import ProductList from "~/components/product-list"
+import SEO from "~/components/seo"
 
-const IndexPage = ({ data: { allStrapiCategory } }) => {
-  const categories = allStrapiCategory.edges
-  const seo = { title: "Categories" }
+const SearchPage = ({
+  data: {
+    allStrapiProduct: { edges },
+  },
+}) => {
+  const flatProducts = edges.map(({ node }) => node)
+
+  const seo = { title: "Products" }
+
   return (
     <Layout>
       <SEO seo={seo} />
-      <PageHeading>Video categories</PageHeading>
-      <CategoryList categories={categories} />
+      {/*<PageHeading>Products</PageHeading>*/}
+      <ProductList products={flatProducts} />
     </Layout>
   )
 }
 
-
-export const query = graphql`
-  query CategoriesQuery {
-    allStrapiCategory {
+export const searchPageQuery = graphql`
+  query ProductSearchQuery {
+    allStrapiProduct {
       edges {
         node {
-          name
-          id
+          specifications {
+            key
+            value
+          }
+          title
+          price
           slug
+          id
+          description
           image {
             localFile {
               childImageSharp {
@@ -44,4 +55,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default SearchPage
