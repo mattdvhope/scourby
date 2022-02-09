@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "~/components/layout"
 import SEO from "~/components/seo"
-import CategoryList from "~/components/category-list"
 import PageHeading from "~/components/styled/page-heading"
+import CategoryList from "~/components/category-list"
 
 const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
@@ -17,7 +17,6 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
     </Layout>
   )
 }
-
 
 export const query = graphql`
   query CategoriesQuery {
