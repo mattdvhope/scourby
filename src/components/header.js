@@ -12,14 +12,6 @@ const Header = ({ setOpenModal }) => {
         <Link className="mx-2 text-lg w-40 mb-4" to="/">
           <img className="image-blurred-edge" src={LogoImage} alt="logo catalog logo"/>
         </Link>
-        <div className="flex flex-col items-center md:flex-row">
-          <button
-            className="mx-2 mb-2 md:mb-0 text-lg"
-            onClick={() => setOpenModal(true)}
-          >
-            Search
-          </button>
-        </div>
       </div>
       <hr className="mt-6 m-auto w-24 border-t-4" />
     </header>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "~/components/header"
+import SearchElement from "./search-element"
 import SearchResults from "~/components/search-results"
 import Footer from "~/components/footer"
 
@@ -25,6 +26,9 @@ const Layout = ({ children }) => {
       />
       <div className="flex flex-col max-w-screen-lg m-auto min-h-screen p-6 md:p-10">
         <main className="flex-1">{children}</main>
+        <div className="flex flex-col items-center">
+          <SearchElement setOpenModal={setOpenModal} />
+        </div>
         <Footer />
       </div>
       {openModal && (
