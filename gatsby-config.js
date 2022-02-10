@@ -39,7 +39,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
-        collectionTypes: [`product`, `category`],
+        collectionTypes: [`product`, `post`, `category`],
         singleTypes: [`global`],
       },
     },
