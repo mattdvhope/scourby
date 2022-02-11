@@ -5,8 +5,6 @@ import PropTypes from "prop-types"
 import Card from "~/components/styled/card"
 import Image from "~/components/image"
 
-import { formatPrice } from "~/helpers/currency-formatter"
-
 const PostList = ({ posts, gridCols }) => {
   return (
     <div className={`grid ${gridCols} gap-6`}>
@@ -14,15 +12,17 @@ const PostList = ({ posts, gridCols }) => {
         return (
           <Card key={post.id}>
             <Link to={`/posts/${post.slug}`} key={post.id}>
-              <Image
+              {/*<Image
                 alt="Post Image"
                 className="rounded-t-md border-gray-200	 border-b"
                 image={post.image}
-              />
+              />*/}
+              <img className="rounded-t-md border-gray-200   border-b" src={post.image} alt={post.title}/>
+
               <div className="px-4 py-6">
                 <p>{post.title}</p>
                 <p className="text-xs self-end">
-                  {post.price && formatPrice(post.price)}
+                  {post.subtitle}
                 </p>
               </div>
             </Link>
