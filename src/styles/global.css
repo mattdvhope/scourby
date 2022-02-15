@@ -37,3 +37,10 @@
     box-shadow: 4px 4px 4px grey;
     border-radius: 5px;
 }
+
+.post-image-blurred-edge {
+    width: 50vw;
+    height: 30vh;
+    box-shadow: 4px 4px 4px grey;
+    border-radius: 5px;
+}

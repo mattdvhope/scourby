@@ -30,15 +30,25 @@ export const searchPageQuery = graphql`
       edges {
         node {
           title
-          subtitle
           slug
           id
           description
-          image
+          image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  aspectRatio: 1.3
+                )
+              }
+            }
+          }
         }
       }
     }
   }
+
 `
 
 export default SearchPage

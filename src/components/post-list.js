@@ -6,18 +6,21 @@ import Card from "~/components/styled/card"
 import Image from "~/components/image"
 
 const PostList = ({ posts, gridCols }) => {
+
+  posts.map(post => {console.log("post", post)})
+
   return (
     <div className={`grid ${gridCols} gap-6`}>
       {posts.map(post => {
         return (
           <Card key={post.id}>
             <Link to={`/posts/${post.slug}`} key={post.id}>
-              {/*<Image
+              <Image
                 alt="Post Image"
                 className="rounded-t-md border-gray-200	 border-b"
-                image={post.image}
-              />*/}
-              <img className="rounded-t-md border-gray-200   border-b" src={post.image} alt={post.title}/>
+                image={post.image[0]}
+              />
+              {/*<img className="rounded-t-md border-gray-200   border-b" src={post.image} alt={post.title}/>*/}
 
               <div className="px-4 py-6">
                 <p>{post.title}</p>

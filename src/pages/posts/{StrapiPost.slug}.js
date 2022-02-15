@@ -6,6 +6,9 @@ import Layout from "~/components/layout"
 import PostList from "~/components/post-list"
 import SEO from "~/components/seo"
 import Image from "~/components/image"
+import "~/styles/global.css";
+import YoutubeVideo from "~/templates/YoutubeVideo";
+import { youtubeEmbeddable } from "~/utils/youtubeEmbeddable";
 
 import { formatPrice } from "~/helpers/currency-formatter"
 
@@ -18,19 +21,31 @@ const PostPage = ({ data }) => {
   }
 
   // const flexJustify = post.specifications.length > 0 ? "between" : "center"
-  const flexJustify = "center"
-
-console.log(post.title)
+  const flexJustify = "between"
 
   return (
     <Layout>
       <SEO seo={seo} />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4 mt-4">
+
+      {post.image && (
         <div className="md:col-span-2 md:pr-4">
-          <img className="rounded-t-md border-gray-200   border-b" src={post.image} alt={post.title}/>
+          <Image
+            className="rounded-md"
+            image={post.image}
+            alt="Post Image"
+          />
         </div>
-        <h1 >{post.title}</h1>
+      )}
+      
+      <div className="container-fluid blog-container">
+        <div className="blog-content">
+          <YoutubeVideo src={youtubeEmbeddable(post.youtubeUrl)} title={post.title} />
+        </div>
       </div>
+
+
+
+      <h1 >{post.title}</h1>
       <div className="my-6 mb-1">
         <ReactMarkdown
           className="prose md:w-4/5 m-auto"
@@ -47,8 +62,20 @@ export const query = graphql`
     strapiPost(slug: { eq: $slug }) {
       id
       title
+      subtitle
       description
-      image
+      image {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              aspectRatio: 1.3
+            )
+          }
+        }
+      }
+      youtubeUrl
     }
   }
 `
