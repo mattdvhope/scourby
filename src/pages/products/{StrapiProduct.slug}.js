@@ -19,6 +19,8 @@ const ProductPage = ({ data }) => {
 
   const flexJustify = product.specifications.length > 0 ? "between" : "center"
 
+console.log(data.cosmicjsPosts.metadata.image)
+
   return (
     <Layout>
       <SEO seo={seo} />
@@ -27,7 +29,7 @@ const ProductPage = ({ data }) => {
           <div className="md:col-span-2 md:pr-4">
             <Image
               className="rounded-md"
-              image={product.image}
+              image={data.cosmicjsPosts.metadata.image}
               alt="Product Image"
             />
           </div>
@@ -128,6 +130,24 @@ export const query = graphql`
         }
       }
     }
+
+    cosmicjsPosts(slug: { eq: "post-1" }) {
+      metadata {
+        image {
+          local {
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 1.3
+              )
+            }
+          }
+        }
+      }
+    }
+
+
   }
 `
 

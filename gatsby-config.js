@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { API_URL, TAG_MANAGER_ID } = process.env;
+const { API_URL, TAG_MANAGER_ID, COSMIC_BUCKET, COSMIC_READ_KEY } = process.env;
 
 
 module.exports = {
@@ -17,6 +17,17 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: 'gatsby-source-cosmicjs',
+      options: {
+        bucketSlug: COSMIC_BUCKET,
+        objectTypes: ['posts','settings'],
+        apiAccess: {
+          read_key: COSMIC_READ_KEY
+        },
+        localMedia: true
+      }
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,

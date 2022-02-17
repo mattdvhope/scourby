@@ -36,7 +36,7 @@ const Image = ({ image, className, alt }) => {
     <GatsbyImage
       alt={alt}
       className={className}
-      image={getImage(image.localFile)}
+      image={getImage(image.localFile) || getImage(image.local)}
     />
   )
 }

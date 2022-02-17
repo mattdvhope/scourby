@@ -47,6 +47,20 @@ export const searchPageQuery = graphql`
         }
       }
     }
+
+
+    allCosmicjsPosts(sort: {fields: [created], order: DESC}, limit: 1000) {
+      edges {
+        node {
+          slug
+          title
+          content
+        }
+      }
+    }
+
+
+
   }
 `
 
