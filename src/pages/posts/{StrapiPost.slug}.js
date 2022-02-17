@@ -14,10 +14,9 @@ import { formatPrice } from "~/helpers/currency-formatter"
 
 const PostPage = ({ data }) => {
   const post = data.strapiPost
-
   const seo = {
     title: post.title,
-    // shareImage: post.image,
+    shareImage: post.image,
   }
 
   // const flexJustify = post.specifications.length > 0 ? "between" : "center"
@@ -36,10 +35,10 @@ const PostPage = ({ data }) => {
           />
         </div>
       )}
-      
+
       <div className="container-fluid blog-container">
         <div className="blog-content">
-          <YoutubeVideo src={youtubeEmbeddable(post.youtubeUrl)} title={post.title} />
+          {/*<YoutubeVideo src={youtubeEmbeddable(post.youtubeurl)} title={post.title} />*/}
         </div>
       </div>
 
@@ -64,18 +63,7 @@ export const query = graphql`
       title
       subtitle
       description
-      image {
-        localFile {
-          childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              aspectRatio: 1.3
-            )
-          }
-        }
-      }
-      youtubeUrl
+      slug
     }
   }
 `

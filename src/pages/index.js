@@ -9,24 +9,24 @@ import PostList from "~/components/post-list"
 
 const SearchPage = ({
   data: {
-    allStrapiPost: { edges },
+    allStrapiProduct: { edges },
   },
 }) => {
-  const flatPosts = edges.map(({ node }) => node)
+  const flatProducts = edges.map(({ node }) => node)
 
-  const seo = { title: "Posts" }
+  const seo = { title: "Products" }
 
   return (
     <Layout>
       <SEO seo={seo} />
-      <PostList posts={flatPosts} />
+      <ProductList products={flatProducts} />
     </Layout>
   )
 }
 
 export const searchPageQuery = graphql`
-  query PostSearchQuery {
-    allStrapiPost {
+  query ProductSearchQuery {
+    allStrapiProduct {
       edges {
         node {
           title
@@ -48,7 +48,6 @@ export const searchPageQuery = graphql`
       }
     }
   }
-
 `
 
 export default SearchPage

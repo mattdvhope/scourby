@@ -18,3 +18,26 @@ exports.onCreateWebpackConfig = ({ actions, plugins, stage }) => {
     })
   }
 }
+
+// exports.createSchemaCustomization = ({ actions: { createTypes, printTypeDefinitions } }) => {
+//   printTypeDefinitions({ path: './typeDefs.txt' })
+//   const typeDefs = `
+//     type StrapiPost implements Node @derivedTypes @dontInfer {
+//       title: String
+//       slug: String
+//       category: StrapiPostCategory
+//       description: String
+//       price: Int
+//       dealerUrl: String
+//       published_at: Date @dateformat
+//       created_at: Date @dateformat
+//       updated_at: Date @dateformat
+//       specifications: [StrapiPostSpecifications]
+//       image: StrapiPostImage
+//       relatedProducts: [StrapiPostRelatedProducts]
+//       strapiId: Int
+//     }
+
+//   `
+//   createTypes(typeDefs)
+// }

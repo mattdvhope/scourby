@@ -18,10 +18,8 @@ const PostList = ({ posts, gridCols }) => {
               <Image
                 alt="Post Image"
                 className="rounded-t-md border-gray-200	 border-b"
-                image={post.image[0]}
+                image={post.image}
               />
-              {/*<img className="rounded-t-md border-gray-200   border-b" src={post.image} alt={post.title}/>*/}
-
               <div className="px-4 py-6">
                 <p>{post.title}</p>
                 <p className="text-xs self-end">
