@@ -144,6 +144,10 @@ export const query = graphql`
             }
           }
         }
+        relatedposts {
+          slug
+          title
+        }
       }
     }
 
