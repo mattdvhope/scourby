@@ -7,7 +7,7 @@ import Image from "~/components/image"
 
 const PostList = ({ posts, gridCols }) => {
 
-  posts.map(post => {console.log("post", post)})
+  // posts.map(post => {console.log("post", post)})
 
   return (
     <div className={`grid ${gridCols} gap-6`}>
@@ -18,7 +18,7 @@ const PostList = ({ posts, gridCols }) => {
               <Image
                 alt="Post Image"
                 className="rounded-t-md border-gray-200	 border-b"
-                image={post.image}
+                image={post.metadata.image}
               />
               <div className="px-4 py-6">
                 <p>{post.title}</p>

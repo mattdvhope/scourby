@@ -5,16 +5,22 @@ import PropTypes from "prop-types"
 
 const Image = ({ image, className, alt }) => {
   const data = useStaticQuery(graphql`
-    query {
-      strapiGlobal {
-        placeHolder {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                aspectRatio: 1.3
-              )
+    query PlaceHolderImageQuery {
+      allCosmicjsGlobal {
+        edges {
+          node {
+            metadata {
+              placeholder {
+                local {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: FULL_WIDTH,
+                      placeholder: BLURRED,
+                      aspectRatio: 1.3
+                    )
+                  }
+                }
+              }
             }
           }
         }
@@ -26,7 +32,7 @@ const Image = ({ image, className, alt }) => {
     return (
       <GatsbyImage
         className={className}
-        image={getImage(data.strapiGlobal.placeHolder.localFile)}
+        image={getImage(data.allCosmicjsGlobal.edges[0].node.metadata.placeholder.local)}
         alt="Placeholder Image"
       />
     )
@@ -36,7 +42,7 @@ const Image = ({ image, className, alt }) => {
     <GatsbyImage
       alt={alt}
       className={className}
-      image={getImage(image.localFile) || getImage(image.local)}
+      image={getImage(image.local)}
     />
   )
 }

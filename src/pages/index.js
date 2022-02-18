@@ -9,59 +9,49 @@ import PostList from "~/components/post-list"
 
 const SearchPage = ({
   data: {
-    allStrapiProduct: { edges },
+    allCosmicjsPosts: { edges },
   },
 }) => {
-  const flatProducts = edges.map(({ node }) => node)
+  const flatPosts = edges.map(({ node }) => node)
 
-  const seo = { title: "Products" }
+  const seo = { title: "Posts" }
 
   return (
     <Layout>
       <SEO seo={seo} />
-      <ProductList products={flatProducts} />
+      <PostList posts={flatPosts} />
     </Layout>
   )
 }
 
 export const searchPageQuery = graphql`
-  query ProductSearchQuery {
-    allStrapiProduct {
+  query PostSearchQuery {
+    allCosmicjsPosts {
       edges {
         node {
           title
           slug
           id
-          description
-          image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  aspectRatio: 1.3
-                )
+          content
+          metadata {
+            subtitle
+            image {
+              local {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: FULL_WIDTH,
+                    placeholder: BLURRED,
+                    aspectRatio: 1.3
+                  )
+                }
               }
             }
           }
         }
       }
     }
-
-
-    allCosmicjsPosts(sort: {fields: [created], order: DESC}, limit: 1000) {
-      edges {
-        node {
-          slug
-          title
-          content
-        }
-      }
-    }
-
-
-
   }
+
 `
 
 export default SearchPage
