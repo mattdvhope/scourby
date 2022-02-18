@@ -138,6 +138,6 @@ module.exports = {
             }
           }),
       },
-    },
+    }, // "gatsby-plugin-local-search"
   ],
 }
