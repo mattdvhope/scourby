@@ -20,8 +20,6 @@ const Layout = ({ children }) => {
 
   const [openModal, setOpenModal] = useState(false)
 
-console.log(data.cosmicjsGlobal.metadata.sitename)
-
   return (
     <div className="bg-gray-50 relative">
       <Header

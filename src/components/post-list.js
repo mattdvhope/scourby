@@ -13,8 +13,8 @@ const PostList = ({ posts, gridCols }) => {
     <div className={`grid ${gridCols} gap-6`}>
       {posts.map(post => {
         return (
-          <Card key={post.id}>
-            <Link to={`/posts/${post.slug}`} key={post.id}>
+          <Card key={post._id}>
+            <Link to={`/posts/${post.slug}`} key={post._id}>
               <Image
                 alt="Post Image"
                 className="rounded-t-md border-gray-200	 border-b"

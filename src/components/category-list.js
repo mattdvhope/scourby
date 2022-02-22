@@ -14,9 +14,9 @@ const CategoryList = ({ categories }) => (
             <Image
               alt="Category Image"
               className="rounded-t-md border-gray-200	 border-b"
-              image={node.image}
+              image={node.metadata.image}
             />
-            <p className="px-4 py-6">{node.name}</p>
+            <p className="px-4 py-6">{node.title}</p>
           </Link>
         </Card>
       )

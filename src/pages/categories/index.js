@@ -9,6 +9,9 @@ import CategoryList from "~/components/category-list"
 const IndexPage = ({ data: { allCosmicjsCategories } }) => {
   const categories = allCosmicjsCategories.edges
   const seo = { title: "Categories" }
+
+
+
   return (
     <Layout>
       <SEO seo={seo} />

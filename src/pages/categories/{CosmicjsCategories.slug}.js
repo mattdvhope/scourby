@@ -3,21 +3,21 @@ import { graphql } from "gatsby"
 
 import Layout from "~/components/layout"
 import PageHeading from "~/components/styled/page-heading"
-import ProductList from "~/components/product-list"
+import PostList from "~/components/post-list"
 import SEO from "~/components/seo"
 
 const CategoryPage = ({ data }) => {
-  const products = data.strapiCategory.products
+  const posts = data.cosmicjsCategories.metadata.posts
   const seo = {
-    title: data.strapiCategory.name,
+    title: data.cosmicjsCategories.title,
   }
 
   return (
     <Layout>
       <SEO seo={seo} />
       <div>
-        <PageHeading>{data.strapiCategory.name}</PageHeading>
-        <ProductList products={products} />
+        <PageHeading>{data.cosmicjsCategories.title}</PageHeading>
+        <PostList posts={posts} />
       </div>
     </Layout>
   )
@@ -27,17 +27,22 @@ export const query = graphql`
 	query CategoryQuery($slug: String!) {
 	  cosmicjsCategories(slug: {eq: $slug}) {
 	    title
-	    slug
-	    id
 	    metadata {
-	      image {
-	        local {
-	          childImageSharp {
-	            gatsbyImageData(
-	              layout: FULL_WIDTH
-	              placeholder: BLURRED
-	              aspectRatio: 1.3
-	            )
+	      posts {
+	        title
+	        slug
+	        _id
+	        metadata {
+	          image {
+	            local {
+	              childImageSharp {
+	                gatsbyImageData(
+	                  layout: FULL_WIDTH
+	                  placeholder: BLURRED
+	                  aspectRatio: 1.3
+	                )
+	              }
+	            }
 	          }
 	        }
 	      }
