@@ -18,9 +18,6 @@ const PostPage = ({ data }) => {
     shareImage: post.metadata.shareImage,
   }
 
-  // const flexJustify = post.specifications.length > 0 ? "between" : "center"
-  const flexJustify = "between"
-
   return (
     <Layout>
       <SEO seo={seo} />
