@@ -1,3 +1,5 @@
+// This was the former {StrapiProduct.slug}.js file....
+
 // import React from "react"
 // import ReactMarkdown from "react-markdown"
 // import { graphql } from "gatsby"
