@@ -1,16 +1,18 @@
 import React from "react"
-// import "./BlogPost.css";
+import "~/styles/global.css"
 
 const YoutubeVideo = ({src, title}) => {
 	return (
-		<iframe // Youtube video 
-      id="FrameHolder"
-      className="video-box" 
-      src={src}
-      title={title}
-      frameBorder="0"
-      allowFullScreen
-    />
+    <div class="youtube-video-container">
+  		<iframe
+        id="FrameHolder"
+        className="youtube-video-container" 
+        src={src}
+        title={title}
+        frameBorder="0"
+        allowFullScreen
+      />
+    </div>
   )
 }
 
