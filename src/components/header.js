@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-import "../styles/global.css";
+import "~/styles/global.css";
 
 const Header = ({ setOpenModal }) => {
   const LogoImage = `https://res.cloudinary.com/dwpkckmyf/image/upload/v1644251334/Bible%20App%20Joy/bajoy-log_xicz77.jpg`;
