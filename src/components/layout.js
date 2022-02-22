@@ -9,7 +9,7 @@ import Footer from "~/components/footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteNameQuery {
+    query SitenameQuery {
       cosmicjsGlobal {
         metadata {
           sitename
@@ -20,11 +20,13 @@ const Layout = ({ children }) => {
 
   const [openModal, setOpenModal] = useState(false)
 
+console.log(data.cosmicjsGlobal.metadata.sitename)
+
   return (
     <div className="bg-gray-50 relative">
       <Header
         setOpenModal={setOpenModal}
-        siteName={data.cosmicjsGlobal.metadata.siteName || `Bible App Joy`}
+        sitename={data.cosmicjsGlobal.metadata.sitename || `Bible App Joy`}
       />
       <div className="flex flex-col max-w-screen-lg m-auto min-h-screen p-6 md:p-10">
         <main className="flex-1">{children}</main>

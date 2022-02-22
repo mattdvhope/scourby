@@ -19,11 +19,11 @@ const Header = ({ setOpenModal }) => {
 }
 
 Header.propTypes = {
-  siteName: PropTypes.string,
+  sitename: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteName: ``,
+  sitename: ``,
 }
 
 export default Header

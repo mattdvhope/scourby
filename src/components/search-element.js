@@ -16,11 +16,11 @@ const SearchElement = ({ setOpenModal }) => {
 }
 
 SearchElement.propTypes = {
-  siteName: PropTypes.string,
+  sitename: PropTypes.string,
 }
 
 SearchElement.defaultProps = {
-  siteName: ``,
+  sitename: ``,
 }
 
 export default SearchElement

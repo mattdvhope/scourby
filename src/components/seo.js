@@ -25,8 +25,8 @@ const SEO = ({ seo = {} }) => {
       }
     }
   `
-  const { strapiGlobal } = useStaticQuery(query)
-  const { defaultSeo, siteName, favicon } = strapiGlobal
+  const { cosmicjsGlobal } = useStaticQuery(query)
+  const { defaultSeo, sitename, favicon } = cosmicjsGlobal.metadata
 
   // Merge default and page-specific SEO values
   const fullSeo = { ...defaultSeo, ...seo }
@@ -65,7 +65,7 @@ const SEO = ({ seo = {} }) => {
     if (fullSeo.shareImage) {
       const imageUrl =
         (process.env.API_URL || "http://localhost:8000") +
-        fullSeo.shareImage.localFile.publicURL
+        fullSeo.shareImage.url
       tags.push(
         {
           name: "image",
@@ -97,12 +97,12 @@ const SEO = ({ seo = {} }) => {
   return (
     <Helmet
       title={fullSeo.title || fullSeo.metaTitle}
-      titleTemplate={`%s | ${siteName}`}
+      titleTemplate={`%s | ${sitename}`}
       meta={metaTags}
       link={[
         {
           rel: "icon",
-          href: favicon.localFile.publicURL,
+          href: favicon.local.publicURL,
         },
       ]}
     />
