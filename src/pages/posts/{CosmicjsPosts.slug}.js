@@ -35,11 +35,7 @@ const PostPage = ({ data }) => {
         </div>
       )}*/}
 
-      <div className="container-fluid blog-container">
-        <div className="blog-content">
-          <YoutubeVideo src={youtubeEmbeddable(post.metadata.youtubeurl)} title={post.title} />
-        </div>
-      </div>
+      <YoutubeVideo src={youtubeEmbeddable(post.metadata.youtubeurl)} title={post.title} />
 
       <div className="my-6 mb-1">
         <div
