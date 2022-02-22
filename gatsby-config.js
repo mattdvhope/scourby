@@ -45,15 +45,6 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: process.env.API_URL,
-    //     queryLimit: 1000, // Default to 100
-    //     collectionTypes: [`product`, `post`, `category`],
-    //     singleTypes: [`global`],
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
