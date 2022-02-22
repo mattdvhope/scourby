@@ -23,7 +23,7 @@ const PostList = ({ posts, gridCols }) => {
               <div className="px-4 py-6">
                 <p>{post.title}</p>
                 <p className="text-xs self-end">
-                  {post.subtitle}
+                  {post.metadata.subtitle}
                 </p>
               </div>
             </Link>

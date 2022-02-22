@@ -45,15 +45,15 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: process.env.API_URL,
-        queryLimit: 1000, // Default to 100
-        collectionTypes: [`product`, `post`, `category`],
-        singleTypes: [`global`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: process.env.API_URL,
+    //     queryLimit: 1000, // Default to 100
+    //     collectionTypes: [`product`, `post`, `category`],
+    //     singleTypes: [`global`],
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -86,25 +86,28 @@ module.exports = {
         // GraphQL query used to fetch all data for the search index. This is
         // required.
         query: `
-          query {
-            allStrapiProduct {
+          query CPosts {
+            allCosmicjsPosts {
               edges {
                 node {
-                  specifications {
-                    key
-                    value
-                  }
                   id
                   title
-                  price
                   slug
-                  description
-                  image {
-                    localFile {
-                      childImageSharp {
-                        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.3)
+                  content
+                  metadata {
+                    image {
+                      local {
+                        childImageSharp {
+                          gatsbyImageData(
+                            layout: FULL_WIDTH,
+                            placeholder: BLURRED,
+                            aspectRatio: 1.3
+                          )
+                        }
                       }
                     }
+                    subtitle
+                    youtubeurl
                   }
                 }
               }
@@ -117,24 +120,24 @@ module.exports = {
         // List of keys to index. The values of the keys are taken from the
         // normalizer function below.
         // Default: all fields
-        index: ["title", "description"],
+        index: ["title", "content"],
         // List of keys to store and make available in your UI. The values of
         // the keys are taken from the normalizer function below.
         // Default: all fields
-        store: ["slug", "title", "description", "image", "id", "price"],
+        store: ["slug", "title", "subtitle", "content", "image", "id"],
         // Function used to map the result from the GraphQL query. This should
         // return an array of items to index in the form of flat objects
         // containing properties to index. The objects must contain the `ref`
         // field above (default: 'id'). This is required.
         normalizer: ({ data }) =>
-          data.allStrapiProduct.edges.map(({ node }) => {
+          data.allCosmicjsPosts.edges.map(({ node }) => {
             return {
               title: node.title,
-              description: node.description,
+              content: node.content,
               slug: node.slug,
               image: node.image,
               id: node.id,
-              price: node.price,
+              subtitle: node.subtitle,
             }
           }),
       },
