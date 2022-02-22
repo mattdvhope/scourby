@@ -3,7 +3,7 @@ import "~/styles/global.css"
 
 const YoutubeVideo = ({src, title}) => {
 	return (
-    <div class="youtube-video-container">
+    <div className="youtube-video-container">
   		<iframe
         id="FrameHolder"
         className="youtube-video-container" 
