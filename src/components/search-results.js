@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useFlexSearch } from "react-use-flexsearch"
 
-import ProductList from "~/components/product-list"
+import PostList from "~/components/post-list"
 import PageHeading from "~/components/styled/page-heading"
-import ProductSearch from "~/components/product-search"
+import PostSearch from "~/components/post-search"
 
 import CloseIcon from "~/images/close.svg"
 
@@ -43,7 +43,7 @@ const SearchResults = ({ setOpenModal, openModal }) => {
         >
           <img className="w-6" src={CloseIcon} alt="close icon" />
         </button>
-        <ProductSearch
+        <PostSearch
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           openModal={openModal}
@@ -52,7 +52,7 @@ const SearchResults = ({ setOpenModal, openModal }) => {
       {results.length > 0 && (
         <div>
           <PageHeading>Search Results</PageHeading>
-          <ProductList products={results} />
+          <PostList posts={results} />
         </div>
       )}
       {hasNoResults && (

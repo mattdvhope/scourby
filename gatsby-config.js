@@ -126,9 +126,9 @@ module.exports = {
               title: node.title,
               content: node.content,
               slug: node.slug,
-              image: node.image,
+              image: node.metadata.image,
               id: node.id,
-              subtitle: node.subtitle,
+              subtitle: node.metadata.subtitle,
             }
           }),
       },

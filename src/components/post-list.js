@@ -12,18 +12,19 @@ const PostList = ({ posts, gridCols }) => {
   return (
     <div className={`grid ${gridCols} gap-6`}>
       {posts.map(post => {
+        const postId = post._id || post.id
         return (
-          <Card key={post.id}>
-            <Link to={`/posts/${post.slug}`} key={post.id}>
+          <Card key={postId}>
+            <Link to={`/posts/${post.slug}`} key={postId}>
               <Image
                 alt="Post Image"
                 className="rounded-t-md border-gray-200	 border-b"
-                image={post.metadata.image}
+                image={post.image || post.metadata.image}
               />
               <div className="px-4 py-6">
                 <p>{post.title}</p>
                 <p className="text-xs self-end">
-                  {post.metadata.subtitle}
+                  {post.subtitle || post.metadata.subtitle}
                 </p>
               </div>
             </Link>
