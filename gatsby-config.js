@@ -35,7 +35,6 @@ module.exports = {
         pixelId: PIXEL_ID,
       },
     },
-
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

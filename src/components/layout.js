@@ -26,8 +26,6 @@ const Layout = ({ children }) => {
       <Helmet>
         <meta name="facebook-domain-verification" content="t55s2n223zucpas6ec8f7qquz6eyxf" />
       </Helmet>
-
-
       <Header
         setOpenModal={setOpenModal}
         sitename={data.cosmicjsGlobal.metadata.sitename || `Bible App Joy`}
