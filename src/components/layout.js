@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Helmet from "react-helmet";
 import Header from "~/components/header"
 import SearchElement from "./search-element"
 import SearchResults from "~/components/search-results"
@@ -22,6 +23,11 @@ const Layout = ({ children }) => {
 
   return (
     <div className="bg-gray-50 relative">
+      <Helmet>
+        <meta name="facebook-domain-verification" content="t55s2n223zucpas6ec8f7qquz6eyxf" />
+      </Helmet>
+
+
       <Header
         setOpenModal={setOpenModal}
         sitename={data.cosmicjsGlobal.metadata.sitename || `Bible App Joy`}
