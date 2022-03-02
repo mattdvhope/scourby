@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { API_URL, TAG_MANAGER_ID, COSMIC_BUCKET, COSMIC_READ_KEY } = process.env;
+const { API_URL, TAG_MANAGER_ID, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID } = process.env;
 
 
 module.exports = {
@@ -29,6 +29,13 @@ module.exports = {
         localMedia: true
       }
     },
+    {
+      resolve: `@hutsoninc/gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: PIXEL_ID,
+      },
+    },
+
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

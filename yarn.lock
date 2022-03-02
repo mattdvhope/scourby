@@ -1529,6 +1529,13 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@hutsoninc/gatsby-plugin-facebook-pixel@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@hutsoninc/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-3.0.0.tgz#0ebd94b546bd26c132cf98798a8eae3611b18a26"
+  integrity sha512-GMgHRtfUJ4Ya9nPrNu1AspOPSKQthVTXJD0cl/QiWs5AtgAt7oV4HAM2lCQg6OjVhyA8Fp1CeO+qeAlYMUOA1w==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+
 "@iarna/toml@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
