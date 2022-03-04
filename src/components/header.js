@@ -39,7 +39,8 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
             <Link
               to="/order"
               onClick={() => {
-                console.log("clicked google")                
+                console.log("clicked google")
+                fbq('track', 'PageView'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
                 // fbq('trackCustom', 'ClickedGooglePlayStore'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
               }}
             >
