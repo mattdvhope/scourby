@@ -45,6 +45,55 @@
     border-radius: 5px;
 }
 
+/*The apple app store and google play store links.*/
+@media screen and (min-width: 745px) {
+  .centered-div {
+    width:40%;
+    margin:0 auto;
+  }
+
+  .app-links {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .apple-app-store-image {
+    width: 26vw;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .google-play-store-image {
+    width: 24.25vw;
+    border-radius: 10px;
+  }
+}
+ 
+@media screen and (max-width: 745px) {
+  .centered-div {
+    width:95%;
+    margin:0 auto;
+  }
+
+  .app-links {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .apple-app-store-image {
+    width: 72vw;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .google-play-store-image {
+    width: 67.15vw;
+    border-radius: 10px;
+  }
+}
+/*The apple app store and google play store links (above).*/
+
+
 .youtube-video-container {
   position: relative;
   overflow: hidden;

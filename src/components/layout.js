@@ -16,6 +16,36 @@ const Layout = ({ children }) => {
           sitename
         }
       }
+      allCosmicjsGlobal {
+        edges {
+          node {
+            metadata {
+              apple_app_store {
+                local {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: FULL_WIDTH,
+                      placeholder: BLURRED,
+                      aspectRatio: 3.0
+                    )
+                  }
+                }
+              }
+              google_play_store {
+                local {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: FULL_WIDTH,
+                      placeholder: BLURRED,
+                      aspectRatio: 2.8
+                    )
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -29,6 +59,7 @@ const Layout = ({ children }) => {
       <Header
         setOpenModal={setOpenModal}
         sitename={data.cosmicjsGlobal.metadata.sitename || `Bible App Joy`}
+        metadata={data.allCosmicjsGlobal.edges[0].node.metadata}
       />
       <div className="flex flex-col max-w-screen-lg m-auto min-h-screen p-6 md:p-10">
         <main className="flex-1">{children}</main>
