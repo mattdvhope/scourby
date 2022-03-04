@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { fbq } from '@hutsoninc/gatsby-plugin-facebook-pixel';
 
 import Image from "~/components/image"
 import "~/styles/global.css";
@@ -20,7 +21,13 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
       <div className="centered-div">
         <div className="app-links">
           <div className="apple-app-store-image">
-            <Link to="/order">
+            <Link
+              to="/order"
+              onClick={() => {
+                console.log("clicked apple")
+                fbq('track', 'PageView'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
+              }}
+            >
               <Image
                 alt="App Store Image"
                 image={metadata.apple_app_store}
@@ -29,7 +36,13 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
           </div>
 
           <div className="google-play-store-image">
-            <Link to="/order">
+            <Link
+              to="/order"
+              onClick={() => {
+                console.log("clicked google")                
+                // fbq('trackCustom', 'ClickedGooglePlayStore'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
+              }}
+            >
               <Image
                 alt="App Store Image"
                 image={metadata.google_play_store}
