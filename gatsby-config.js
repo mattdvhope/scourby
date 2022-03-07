@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { API_URL, TAG_MANAGER_ID, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID } = process.env;
+const { API_URL, TAG_MANAGER_ID, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID, GTM_ID } = process.env;
 
 
 module.exports = {
@@ -17,6 +17,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: GTM_ID,
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      }
     },
     {
       resolve: 'gatsby-source-cosmicjs',
