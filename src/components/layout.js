@@ -55,6 +55,7 @@ const Layout = ({ children }) => {
     <div className="bg-gray-50 relative">
       <Helmet>
         <meta name="facebook-domain-verification" content="t55s2n223zucpas6ec8f7qquz6eyxf" />
+        <meta name="facebook-domain-verification" content="jmrq69nmonbj5ygtjeld2017156kaf" />
       </Helmet>
       <Header
         setOpenModal={setOpenModal}
