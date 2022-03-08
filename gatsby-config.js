@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { API_URL, TAG_MANAGER_ID, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID, GTM_ID } = process.env;
+const { API_URL, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID, GTM_ID } = process.env;
 
 
 module.exports = {
@@ -58,14 +58,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: process.env.TAG_MANAGER_ID,
-        includeInDevelopment: false,
-        enableWebVitalsTracking: true,
-      }
     },
     // You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create
