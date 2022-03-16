@@ -32,6 +32,8 @@ const PostPage = ({ data }) => {
         </div>
       )}*/}
 
+      <h1 className="text-3xl font-bold text-center title-setup" >{post.title}</h1>
+
       <YoutubeVideo src={youtubeEmbeddable(post.metadata.youtubeurl)} title={post.title} />
 
       <div className="my-6 mb-1">
