@@ -29,7 +29,7 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
               }}
             >
               <Image
-                alt="App Store Image"
+                alt="Apple App Store"
                 image={metadata.apple_app_store}
               />
             </Link>
@@ -45,7 +45,7 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
               }}
             >
               <Image
-                alt="App Store Image"
+                alt="Google Play Store"
                 image={metadata.google_play_store}
               />
             </a>
