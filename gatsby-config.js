@@ -9,6 +9,9 @@ module.exports = {
   flags: {
     DEV_SSR: false,
   },
+  siteMetadata: {
+    siteUrl: SITE_URL
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -18,14 +21,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        resolveSiteUrl: () => SITE_URL
-      }
-    },
-
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -55,6 +50,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-postcss",
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
