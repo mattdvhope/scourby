@@ -15,7 +15,7 @@ const PostList = ({ posts, gridCols }) => {
         const postId = post._id || post.id
         return (
           <Card key={postId}>
-            <Link to={`/posts/${post.slug}`} key={postId}>
+            <Link to={`/posts/${post.slug}`} key={postId} rel="canonical" >
               <Image
                 alt={post.title}
                 className="rounded-t-md border-gray-200	 border-b"
