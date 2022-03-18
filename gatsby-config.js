@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { API_URL, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID, GTM_ID } = process.env;
+const { SITE_URL, API_URL, COSMIC_BUCKET, COSMIC_READ_KEY, PIXEL_ID, GTM_ID } = process.env;
 
 
 module.exports = {
@@ -18,6 +18,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        resolveSiteUrl: () => SITE_URL
+      }
+    },
+
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
