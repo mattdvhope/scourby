@@ -17,7 +17,7 @@ const PostList = ({ posts, gridCols }) => {
           <Card key={postId}>
             <Link to={`/posts/${post.slug}`} key={postId}>
               <Image
-                alt="Post Image"
+                alt={post.title}
                 className="rounded-t-md border-gray-200	 border-b"
                 image={post.image || post.metadata.image}
               />
