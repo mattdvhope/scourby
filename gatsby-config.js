@@ -51,6 +51,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-postcss",
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
