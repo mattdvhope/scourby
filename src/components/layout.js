@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header
         setOpenModal={setOpenModal}
-        sitename={data.cosmicjsGlobal.metadata.sitename || `Bible App Joy`}
+        sitename={data.cosmicjsGlobal.metadata.sitename || `Scourby Audio`}
         metadata={data.allCosmicjsGlobal.edges[0].node.metadata}
       />
       <div className="flex flex-col max-w-screen-lg m-auto min-h-screen p-6 md:p-10">

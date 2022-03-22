@@ -12,7 +12,7 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
     <header className="p-8">
       <div className="flex flex-col items-center">
         <Link className="mx-2 text-lg w-40 mb-4" to="/">
-          <img className="image-blurred-edge" src={LogoImage} alt="Bible App Joy"/>
+          <img className="image-blurred-edge" src={LogoImage} alt="Scourby Audio"/>
         </Link>
       </div>
       <hr className="mt-1 m-auto w-24 border-t-4" />

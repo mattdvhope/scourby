@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="flex justify-between pb-4">
       <Link to="/">
         <p className="text-sm font-semibold text-gray-600">
-          Bible App Joy
+          Scourby Audio
         </p>
       </Link>
       <div className="flex gap-3 ml-4">
