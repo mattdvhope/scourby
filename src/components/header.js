@@ -7,7 +7,7 @@ import Image from "~/components/image"
 import "~/styles/global.css";
 
 const Header = ({ setOpenModal, sitename, metadata }) => {
-  const LogoImage = `https://res.cloudinary.com/dwpkckmyf/image/upload/v1644251334/Bible%20App%20Joy/bajoy-log_xicz77.jpg`;
+  const LogoImage = `https://imgix.cosmicjs.com/29d07b10-aa05-11ec-bd4d-d755cb3d1844-scourby-logo.jpg`;
   return (
     <header className="p-8">
       <div className="flex flex-col items-center">
