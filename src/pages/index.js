@@ -24,7 +24,6 @@ const SearchPage = ({
   )
 }
 
-
 export const searchPageQuery = graphql`
   query PostSearchQuery {
     allCosmicjsPosts {
