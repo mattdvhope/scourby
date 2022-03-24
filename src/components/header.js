@@ -11,7 +11,7 @@ const Header = ({ sitename, metadata }) => {
   const [audioBibleLinks, setAudioBibleLinks] = useState(<AudioBibleLinks metadata={metadata}/>);
 
   useEffect(() => {
-    if (window.location.pathname === "/order") {
+    if (window.location.pathname === "/choosekbps") {
       setAudioBibleLinks(null)
     }
   });
@@ -24,7 +24,7 @@ const Header = ({ sitename, metadata }) => {
         </Link>
       </div>
       <hr className="mt-1 m-auto w-24 border-t-4" />
-    {audioBibleLinks}
+      {audioBibleLinks}
     </header>
   )
 }
