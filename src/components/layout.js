@@ -20,24 +20,35 @@ const Layout = ({ children }) => {
         edges {
           node {
             metadata {
-              apple_app_store {
+              audio_bible_voice_only {
                 local {
                   childImageSharp {
                     gatsbyImageData(
                       layout: FULL_WIDTH,
                       placeholder: BLURRED,
-                      aspectRatio: 3.0
+                      aspectRatio: 1.4278
                     )
                   }
                 }
               }
-              google_play_store {
+              audio_bible_dramatized {
                 local {
                   childImageSharp {
                     gatsbyImageData(
                       layout: FULL_WIDTH,
                       placeholder: BLURRED,
-                      aspectRatio: 2.8
+                      aspectRatio: 1.4278
+                    )
+                  }
+                }
+              }
+              audio_bible_both {
+                local {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: FULL_WIDTH,
+                      placeholder: BLURRED,
+                      aspectRatio: 1.4278
                     )
                   }
                 }

@@ -45,53 +45,76 @@
     border-radius: 5px;
 }
 
-/*The apple app store and google play store links.*/
+/*The audio bible store links.*/
 @media screen and (min-width: 745px) {
   .centered-div {
-    width:40%;
-    margin:0 auto;
+    width: 55%;
+    margin: 0 auto;
   }
 
-  .app-links {
+  .audio-links {
     margin-top: 10px;
     display: flex;
   }
 
-  .apple-app-store-image {
-    width: 26vw;
-    border-radius: 10px;
-    margin-right: 10px;
+  .audio-bible-voice-only-image {
+    height: 11.90643vw;
+    width: 17vw;
+    border-radius: 4px;
+    margin-left: -22px;
+    margin-right: 12px;
   }
 
-  .google-play-store-image {
-    width: 24.25vw;
-    border-radius: 10px;
+  .audio-bible-dramatized-image {
+    height: 11.90643vw;
+    width: 17vw;
+    border-radius: 4px;
+    margin-right: 12px;
   }
+
+  .audio-bible-both-image {
+    height: 11.90643vw;
+    width: 17vw;
+    border-radius: 4px;
+    margin-right: -18px;
+  }
+
 }
  
 @media screen and (max-width: 745px) {
   .centered-div {
-    width:95%;
+    width: 100%;
     margin:0 auto;
   }
 
-  .app-links {
-    margin-top: 10px;
+  .audio-links {
+    margin-top: 30px;
     display: flex;
   }
 
-  .apple-app-store-image {
-    width: 72vw;
-    border-radius: 10px;
-    margin-right: 10px;
+  .audio-bible-voice-only-image {
+    height: 21.71172433vw;
+    width: 31vw;
+    border-radius: 4px;
+    margin-left: -24.5px;
+    margin-right: 6.5px;
   }
 
-  .google-play-store-image {
-    width: 67.15vw;
-    border-radius: 10px;
+  .audio-bible-dramatized-image {
+    height: 21.71172433vw;
+    width: 31vw;
+    border-radius: 4px;
+    margin-right: 6.5px;
+  }
+
+  .audio-bible-both-image {
+    height: 21.71172433vw;
+    width: 31vw;
+    border-radius: 4px;
+    margin-right: -18px;
   }
 }
-/*The apple app store and google play store links (above).*/
+/*The audio bible store links (above).*/
 
 
 .title-setup {
