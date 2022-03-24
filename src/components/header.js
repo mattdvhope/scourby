@@ -8,14 +8,13 @@ import "~/styles/global.css";
 
 const Header = ({ setOpenModal, sitename, metadata }) => {
   const LogoImage = `https://imgix.cosmicjs.com/29d07b10-aa05-11ec-bd4d-d755cb3d1844-scourby-logo.jpg`;
-  const [linksToBibles, setLinksToBibles] = useState(<AudioBibleLinks metadata={metadata}/>);
+  const [audioBibleLinks, setAudioBibleLinks] = useState(<AudioBibleLinks metadata={metadata}/>);
 
   useEffect(() => {
     if (window.location.pathname === "/order") {
-      setLinksToBibles(null)
+      setAudioBibleLinks(null)
     }
   });
-
 
   return (
     <header className="p-8">
@@ -25,7 +24,7 @@ const Header = ({ setOpenModal, sitename, metadata }) => {
         </Link>
       </div>
       <hr className="mt-1 m-auto w-24 border-t-4" />
-    {linksToBibles}
+    {audioBibleLinks}
     </header>
   )
 }
