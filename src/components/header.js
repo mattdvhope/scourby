@@ -6,7 +6,7 @@ import Image from "~/components/image"
 import AudioBibleLinks from "~/components/audio-bible-links"
 import "~/styles/global.css";
 
-const Header = ({ setOpenModal, sitename, metadata }) => {
+const Header = ({ sitename, metadata }) => {
   const LogoImage = `https://imgix.cosmicjs.com/29d07b10-aa05-11ec-bd4d-d755cb3d1844-scourby-logo.jpg`;
   const [audioBibleLinks, setAudioBibleLinks] = useState(<AudioBibleLinks metadata={metadata}/>);
 
