@@ -33,7 +33,7 @@ module.exports = {
       resolve: 'gatsby-source-cosmicjs',
       options: {
         bucketSlug: COSMIC_BUCKET,
-        objectTypes: ['categories', 'posts', 'products-with-subproducts', 'global'],
+        objectTypes: ['categories', 'posts', 'products', 'global'],
         apiAccess: {
           read_key: COSMIC_READ_KEY
         },
