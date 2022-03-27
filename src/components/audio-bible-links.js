@@ -9,7 +9,7 @@ const AudioBibleLinks = ({ metadata }) =>
 
       <div>
         <Link 
-          to="/choosekbps"
+          to="/voiceonly"
           onClick={() => {
             fbq('track', 'PageView'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
           }}
@@ -24,7 +24,7 @@ const AudioBibleLinks = ({ metadata }) =>
 
       <div>
         <Link 
-          to="/choosekbps"
+          to="/dramatized"
           onClick={() => {
             fbq('track', 'PageView'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
             // fbq('trackCustom', 'ClickedGooglePlayStore'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
@@ -40,7 +40,7 @@ const AudioBibleLinks = ({ metadata }) =>
 
       <div>
         <Link 
-          to="/choosekbps"
+          to="/both"
           onClick={() => {
             fbq('track', 'PageView'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
             // fbq('trackCustom', 'ClickedGooglePlayStore'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
