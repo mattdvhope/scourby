@@ -11,10 +11,15 @@ const Header = ({ sitename, metadata }) => {
   const [audioBibleLinks, setAudioBibleLinks] = useState(<AudioBibleLinks metadata={metadata}/>);
 
   useEffect(() => {
+console.log(window.location.pathname)
+
     if (
       window.location.pathname === "/voiceonly" ||
+      window.location.pathname === "/voiceonly/" ||
       window.location.pathname === "/dramatized" ||
-      window.location.pathname === "/both"
+      window.location.pathname === "/dramatized/" ||
+      window.location.pathname === "/both" ||
+      window.location.pathname === "/both/"
     ) {
       setAudioBibleLinks(null)
     }
