@@ -1,38 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
-import Layout from "~/components/layout"
-import Image from "~/components/image"
-import "~/styles/global.css";
-
+import PurchaseTemplate from "~/templates/PurchaseTemplate"
 
 const Both = ({
   data: {
     allCosmicjsProducts: { edges }
   }
-}) => {
-  return (
-    <Layout>
-      <div className="centered-div" style={{ marginTop: `-40px` }}>
-        <Image
-          className="audio-bible-voice-only-image??????"
-          alt="Audio Bible Both"
-          image={edges[0].node.metadata.image}
-        />
-        {edges.map(({node}) => {
-          return (
-            <a href={node.metadata.sub_product_characteristic.product_link}>
-              <h3>{node.title}</h3>
-              <br/>
-              <hr/>
-              <br/>
-            </a>
-          )
-        })}
-      </div>
-    </Layout>
-  )
-}
+}) => <PurchaseTemplate edges={edges} imageAlt="Audio Bible Both"/>
 
 export const searchPageQuery = graphql`
   query BothKbpsQuery {
@@ -43,6 +17,7 @@ export const searchPageQuery = graphql`
     ) {
       edges {
         node {
+          id
           title
           content
           metadata {
