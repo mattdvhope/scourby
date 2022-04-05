@@ -32,19 +32,21 @@ const PostPage = ({ data }) => {
         </div>
       )}*/}
 
-      <h1 className="text-3xl font-bold text-center title-setup" >{post.title}</h1>
+      <h1 className="text-3xl font-bold text-center video-post-title" >{post.title}</h1>
 
-      <YoutubeVideo src={youtubeEmbeddable(post.metadata.youtubeurl)} title={post.title} />
-
-      <div className="my-6 mb-1">
-        <div
-          className="prose md:w-4/5 m-auto"
-          dangerouslySetInnerHTML={{
-            __html: post.content
-          }}
-        />
-        <hr className="mt-6 mb-12 m-auto w-24 border-t-4" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24 mt-4">
+        <YoutubeVideo src={youtubeEmbeddable(post.metadata.youtubeurl)} title={post.title} />
+        <div className="my-6 mb-1">
+          <div
+            className="prose md:w-4/5 m-auto"
+            dangerouslySetInnerHTML={{
+              __html: post.content
+            }}
+          />
+          <hr className="mt-6 mb-12 m-auto w-24 border-t-4" />
+        </div>
       </div>
+
       {post.metadata.relatedposts.length > 0 && (
         <div className="flex flex-col my-6 mb-24">
           <h2 className="text-3xl font-bold text-center">Related Posts</h2>
