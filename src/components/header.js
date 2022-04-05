@@ -11,8 +11,6 @@ const Header = ({ sitename, metadata }) => {
   const [audioBibleLinks, setAudioBibleLinks] = useState(<AudioBibleLinks metadata={metadata}/>);
 
   useEffect(() => {
-console.log(window.location.pathname)
-
     if (
       window.location.pathname === "/voiceonly" ||
       window.location.pathname === "/voiceonly/" ||
