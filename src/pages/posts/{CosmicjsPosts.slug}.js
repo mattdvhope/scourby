@@ -34,7 +34,7 @@ const PostPage = ({ data }) => {
 
       <h1 className="text-3xl font-bold text-center video-post-title" >{post.title}</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-24 mt-4">
         <YoutubeVideo src={youtubeEmbeddable(post.metadata.youtubeurl)} title={post.title} />
         <div className="my-6 mb-1">
           <div
