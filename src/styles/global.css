@@ -45,7 +45,7 @@
     border-radius: 5px;
 }
 
-/*The audio bible store links.*/
+/*The audio bible store links on header.*/
 @media screen and (min-width: 745px) {
   .centered-div {
     width: 55%;
@@ -114,33 +114,112 @@
     margin-right: -18px;
   }
 }
-/*The audio bible store links (above).*/
+/*The audio bible store links on header (above).*/
 
 
+/*Audio bible store link on each product page.*/
+.product-title {
+  color: #B6895D;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
 
-/*Individual audio bible store link.*/
-@media screen and (min-width: 745px) {
-  .indiv-audio-bible-image {
-    width: 100%;
-    margin:0 auto;
-    height: 28vw;
-    width: 40vw;
+.enclosed-product {
+  border-style: solid;
+  background-color: #EEE5DC;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+@media screen and (min-width: 1400px) {
+  .product-title {
+    font-size: 140%;
+    margin-right: 10px;
+  }
+
+  .audio-bible-image {
+    /*margin:0 auto;*/
+    margin-left: 50px;
+    height: 7.7vw;
+    width: 11vw;
     border-radius: 4px;
   }
 }
 
-@media screen and (max-width: 745px) {
-  .indiv-audio-bible-image {
-    width: 100%;
-    margin:0 auto;
-    height: 56vw;
-    width: 80vw;
-    border-radius: 4px;
+@media screen and (max-width: 1400px) {
+  .product-title {
+    font-size: 150%;
+    margin-right: 10px;
+  }
 
+  .audio-bible-image {
+    /*margin:0 auto;*/
+    margin-left: 50px;
+    height: 9.1vw;
+    width: 13vw;
+    border-radius: 4px;
   }
 }
 
-/*Individual audio bible store link (above).*/
+@media screen and (max-width: 1220px) {
+  .product-title {
+    font-size: 150%;
+    margin-right: 10px;
+  }
+
+  .audio-bible-image {
+    /*margin:0 auto;*/
+    margin-left: 50px;
+    height: 11.2vw;
+    width: 16vw;
+    border-radius: 4px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .product-title {
+    font-size: 120%;
+    margin-right: 10px;
+  }
+
+  .audio-bible-image {
+    /*margin:0 auto;*/
+    margin-left: 50px;
+    height: 10.85vw;
+    width: 15.5vw;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .product-title {
+    font-size: 120%;
+    margin-right: 5px;
+  }
+
+  .audio-bible-image {
+    /*margin:0 auto;*/
+    margin-left: 35px;
+    height: 10.85vw;
+    width: 15.5vw;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product-title {
+    font-size: 120%;
+  }
+
+  .audio-bible-image {
+    margin:0 auto;
+    height: 24.5vw;
+    width: 35vw;
+    border-radius: 4px;
+  }
+}
+/*Audio bible store link on each product page (above).*/
 
 
 
