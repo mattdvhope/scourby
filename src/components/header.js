@@ -7,7 +7,7 @@ import AudioBibleLinks from "~/components/audio-bible-links"
 import "~/styles/global.css";
 
 const Header = ({ sitename, metadata }) => {
-  const LogoImage = `https://imgix.cosmicjs.com/29d07b10-aa05-11ec-bd4d-d755cb3d1844-scourby-logo.jpg`;
+  const LogoImage = `https://cdn.cosmicjs.com/d6bba820-b501-11ec-b861-d7583e511b10-scourby-audio-logo.jpg`;
   const [audioBibleLinks, setAudioBibleLinks] = useState(<AudioBibleLinks metadata={metadata}/>);
 
   useEffect(() => {
