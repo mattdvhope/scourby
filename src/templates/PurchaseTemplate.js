@@ -15,7 +15,7 @@ const PurchaseTemplate = ({edges, imageAlt}) =>
               href={node.metadata.sub_product_characteristic.product_link}
               key={node.id}
               onClick={() => {
-                fbq('trackCustom', 'ClickedToOrderPage'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
+                fbq('track', 'PageView'); // see https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking/ "Custom Conversions"
               }}
             >
               <div className="grid md:grid-cols-2 gap-4 mb-3 mt-4">
