@@ -11,7 +11,7 @@ const AudioBibleLinks = ({ metadata }) =>
         <Link 
           to="/voiceonly"
           onClick={() => {
-            fbq('trackCustom', 'ClickedHeaderAd'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
+            fbq('track', 'PageView'); // see https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking/ "Custom Conversions"
           }}
         >
           <Image
@@ -26,8 +26,7 @@ const AudioBibleLinks = ({ metadata }) =>
         <Link 
           to="/dramatized"
           onClick={() => {
-            fbq('trackCustom', 'ClickedHeaderAd'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
-            // fbq('trackCustom', 'ClickedGooglePlayStore'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
+            fbq('track', 'PageView'); // see https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking/ "Custom Conversions"
           }}
         >
           <Image
@@ -42,8 +41,7 @@ const AudioBibleLinks = ({ metadata }) =>
         <Link 
           to="/both"
           onClick={() => {
-            fbq('trackCustom', 'ClickedHeaderAd'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
-            // fbq('trackCustom', 'ClickedGooglePlayStore'); // you can add JSON params here too!! --> https://developers.facebook.com/docs/mediaguide/pixel-and-analytics
+            fbq('track', 'PageView'); // see https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking/ "Custom Conversions"
           }}
         >
           <Image
