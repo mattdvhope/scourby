@@ -65,8 +65,7 @@ const Layout = ({ children }) => {
   return (
     <div className="bg-gray-50 relative">
       <Helmet>
-        <meta name="facebook-domain-verification" content="t55s2n223zucpas6ec8f7qquz6eyxf" /> {/*bibleappjoy.net*/}
-        <meta name="facebook-domain-verification" content="jmrq69nmonbj5ygtjeld2017156kaf" /> {/*bajoy.netlify.app*/}
+        <meta name="facebook-domain-verification" content="wymeib84cqihovmenum81aropkvy9p" /> {/*scourbyaudio.com*/}
       </Helmet>
       <Header
         setOpenModal={setOpenModal}
