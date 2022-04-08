@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
       </Link>
       <div className="flex gap-3 ml-4">
-        <a href="https://www.facebook.com/Bible-App-Joy-111284054795140" className="ml-3">
+        <a href="https://www.facebook.com/scourbyaudiobible/" className="ml-3">
           <img src={facebook} alt="Facebook" />
         </a>
       </div>
