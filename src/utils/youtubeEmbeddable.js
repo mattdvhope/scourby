@@ -1,6 +1,6 @@
 export const youtubeEmbeddable = (youtubeUrl) => {
   const video_id = youtubeId(youtubeUrl);
-  return `https://www.youtube.com/embed/${video_id}?rel=0`
+  return `https://www.youtube.com/embed/${video_id}?rel=0&cc_load_policy=1`
 }
 
 const youtubeId = (youtubeUrl) => {
