@@ -1,13 +1,43 @@
 import React from "react"
-import Layout from "~/components/layout"
-import SEO from "~/components/seo"
-import PageHeading from "~/components/styled/page-heading"
-import ProductList from "~/components/product-list"
-import PostList from "~/components/post-list"
+import { graphql } from "gatsby"
+import PurchaseTemplate from "~/templates/PurchaseTemplate"
 
-const OrderTest = () => 
-  <Layout>
-    <h1 className="flex flex-col items-center">Order Test Page</h1>
-  </Layout>
+const Order = ({
+  data: {
+    allCosmicjsProducts: { edges }
+  }
+}) => <PurchaseTemplate edges={edges} imageAlt="Scourby Audio Product"/>
 
-export default OrderTest
+export const searchPageQuery = graphql`
+  query OrderQuery {
+    allCosmicjsProducts {
+      edges {
+        node {
+          id
+          title
+          content
+          metadata {
+            sub_product_characteristic {
+              disctinctive_characteristic
+              price
+              product_link
+            }
+            image {
+              local {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: FULL_WIDTH,
+                    placeholder: BLURRED,
+                    aspectRatio: 1.4278
+                  )
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+export default Order
