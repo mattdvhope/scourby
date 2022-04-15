@@ -17,7 +17,9 @@ const Header = ({ sitename, metadata }) => {
       window.location.pathname === "/dramatized" ||
       window.location.pathname === "/dramatized/" ||
       window.location.pathname === "/both" ||
-      window.location.pathname === "/both/"
+      window.location.pathname === "/both/" ||
+      window.location.pathname === "/order" ||
+      window.location.pathname === "/order/"
     ) {
       setAudioBibleLinks(null)
     }
@@ -26,7 +28,7 @@ const Header = ({ sitename, metadata }) => {
   return (
     <header className="p-8">
       <div className="flex flex-col items-center">
-        <Link className="mx-2 text-lg w-40 mb-4" to="/">
+        <Link className="mx-2 text-lg w-40 mb-4" to="/order">
           <img className="image-blurred-edge" src={LogoImage} alt="Scourby Audio"/>
         </Link>
       </div>
