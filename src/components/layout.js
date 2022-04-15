@@ -74,10 +74,10 @@ const Layout = ({ children }) => {
       />
       <div className="flex flex-col max-w-screen-lg m-auto min-h-screen p-6 md:p-10">
         <main className="flex-1">{children}</main>
-        <div className="flex flex-col items-center">
+        {/*<div className="flex flex-col items-center">
           <SearchElement setOpenModal={setOpenModal} />
-        </div>
-        <Footer />
+        </div>*/}
+        {/*<Footer />*/}
       </div>
       {openModal && (
         <div className="h-screen max-w-screen-lg m-auto fixed bottom-0 top-0 right-0 left-0 px-6 pb-10 pt-20 md:p-10 md:pt-40">
