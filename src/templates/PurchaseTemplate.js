@@ -10,10 +10,9 @@ const PurchaseTemplate = ({edges, imageAlt}) =>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24 mt-4" style={{ marginTop: `-65px` }}>
       {edges.map(({node}) => {
         return (
-          <div className="enclosed-product">
+          <div className="enclosed-product" key={node.id}>
             <a
               href={node.metadata.sub_product_characteristic.product_link}
-              key={node.id}
               onClick={() => {
                 fbq('track', 'PageView'); // see https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking/ "Custom Conversions"
               }}
@@ -22,7 +21,7 @@ const PurchaseTemplate = ({edges, imageAlt}) =>
                 <Image
                   className="audio-bible-image"
                   alt={imageAlt}
-                  image={edges[0].node.metadata.image}
+                  image={node.metadata.image}
                 />
                 <p className="product-title text-center">{node.title}</p>
               </div>
