@@ -10,7 +10,12 @@ const Order = ({
 
 export const searchPageQuery = graphql`
   query OrderQuery {
-    allCosmicjsProducts {
+    allCosmicjsProducts (
+      sort: {
+        order: ASC, 
+        fields: order
+      }
+    ) {
       edges {
         node {
           id
